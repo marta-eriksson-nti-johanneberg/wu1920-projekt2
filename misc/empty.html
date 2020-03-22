@@ -1,0 +1,25 @@
+här ska egentligen vara någonting men jag fixade inte denna sidan
+
+<br><br><br>
+
+<a href="javascript:history.back()"> Hoppa tebax</a>
+
+<script>
+        var i =0;
+        var images =[];
+        var time = 3000;
+        
+        images[0] = 'img/slide1.png'
+        images[1] = 'img/slide2.png'
+        images[3] = 'img/slide3.png'
+
+        function changeimg(){
+            document.slide.src = images[i];
+            if(i< images.length - 1){i = i+1;}
+            else {i = 0;}
+            setTimeout("changeimg()", time);
+        }
+        window.onload = changeimg;
+        </script>
+        
+        <img name="slide" width="100%" height="2em">
